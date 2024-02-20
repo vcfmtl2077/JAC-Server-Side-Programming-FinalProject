@@ -29,8 +29,8 @@ PHP Admin will be available at http://localhost:8080/index.php . Username: `root
 project
 ├── Dockerfile         ........................    docker config file
 ├── README.md          ........................    readme
-├── compose.yaml
-├── composer.json      ........................    docker compose config file
+├── compose.yaml       ........................    docker compose config file
+├── composer.json     
 ├── composer.lock
 ├── db                 ........................    docker database secret folder
 │   └── password.txt
