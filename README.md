@@ -20,6 +20,8 @@ Stop and remove the running containers:
 docker compose down
 ```
 
+Your application will be available at http://localhost:9000/hello.php .
+
 ## Prject folder structure
 ```
 project
