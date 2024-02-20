@@ -27,16 +27,16 @@ PHP Admin will be available at http://localhost:8080/index.php . Username: `root
 ## Prject folder structure
 ```
 project
-├── Dockerfile         ...............................................    docker config file
-├── README.md          ...............................................    readme
+├── Dockerfile         ........................    docker config file
+├── README.md          ........................    readme
 ├── compose.yaml
-├── composer.json      ...............................................    docker compose config file
+├── composer.json      ........................    docker compose config file
 ├── composer.lock
-├── db                 ...............................................    docker database secret folder
+├── db                 ........................    docker database secret folder
 │   └── password.txt
-├── src                ...............................................    project source folder
+├── src                ........................    project source code folder
 │   └── db
 │       └── config.php
-└── tests              ...............................................    project test folder
+└── tests              ........................    project test code folder
     └── HelloWorldTest.php
 ```
