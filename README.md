@@ -22,6 +22,8 @@ docker compose down
 
 Your application will be available at http://localhost:9000/hello.php .
 
+PHP Admin will be available at http://localhost:8080/index.php . Username: `root`. Password: `example`.
+
 ## Prject folder structure
 ```
 project
