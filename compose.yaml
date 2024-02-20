@@ -31,7 +31,7 @@ services:
       - MARIADB_ROOT_PASSWORD_FILE=/run/secrets/db-password
       - MARIADB_DATABASE=jac
     ports:
-      - 3306:3306
+      - 3308:3306
     healthcheck:
       test:  ["CMD", "/usr/local/bin/healthcheck.sh", "--su-mysql", "--connect",  "--innodb_initialized"]
       interval: 10s
