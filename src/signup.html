@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pets Pets - Signup</title>
+    <link rel="stylesheet" type="text/css" href="css/signup.css">
+    <link rel="icon" href="assets/favicon.ico">
+</head>
+<body>
+   
+
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="assets/puppy_-_4740 (540p).mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <div class="form-container">
+        <div class="header">
+            <div>
+                <img src="assets/pets-logo-15.svg" alt="Pets Logo" class="logo">
+            </div>
+            <div>
+                <h2>Sign Up</h2>
+            </div>
+        </div>
+
+        <form id="signupForm">
+            <div class="input-group">
+                <label for="userName">User Name *</label>
+                <input type="text" id="userName" name="userName" placeholder="Your user name.." required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password *</label>
+                <input type="password" id="password" name="password" placeholder="Your password.." required 
+                        title="Please contain numbers, uppercase and lowercase letters, and symbols, and must be at least 8 characters long.">
+            </div>
+
+            <div class="input-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Your first name.." required>
+            </div>
+
+            <div class="input-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Your last name.." required>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email * </label>
+                <input type="email" id="email" name="email" placeholder="Email.." required>
+            </div>
+
+            <div class="input-group">
+                <label for="telephone">Telephone </label>
+                <input type="tel" id="telephone" name="telephone" >
+            </div>
+
+            <div class="input-group">
+                <label for="province">Province *</label>
+                <select id="province" required>
+                    <option value="Ontatio">Ontatio</option>
+                    <option value="Quebec">Quebec</option>
+                    <option value="Alberta">Alberta</option>
+                    <option value="British Columbia">British Columbia</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="city">City *</label>
+                <input type="text" id="city" name="lastName" placeholder="Your City.." required>
+            </div>
+            <div class="input-group dob">
+                <label>Date of Birth</label>
+                <select id="year" name="year"></select>
+                <select id="month" name="month"></select>
+                <select id="day" name="day"></select>
+            </div>
+
+            <div class="input-group btn">
+                <button type="submit" class="button">Sign Up</button>
+                <button type="reset" class="button">Reset</button>
+            </div>
+        </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/secure-ls/dist/secure-ls.min.js"></script>
+    <script src="js/signup.js"></script>
+</body>
+</html>

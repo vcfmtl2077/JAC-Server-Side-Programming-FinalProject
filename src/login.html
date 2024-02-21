@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets Pets - Login</title>
+    <link rel="stylesheet" type="text/css" href="css/signup.css">
+    <link rel="icon" href="assets/favicon.ico">
+    <!-- <meta name="theme-color" content="#712cf9"> -->
+</head>
+
+<body>
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="assets/dog_-_15305 (540p).mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <div class="form-container">
+        <div class="header">
+            <div>
+                <img src="assets/pets-logo-15.svg" alt="Pets Logo" class="logo">
+            </div>
+
+            <div>
+                <h2>Login</h2>
+            </div>
+        </div>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="userName">User Name *</label>
+                <input type="text" id="userName" name="userName" placeholder="Your user name.." required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password *</label>
+                <input type="password" id="password" name="password" placeholder="Your password.." required>
+            </div>
+
+            <div class="input-group btn">
+                <button type="submit" class="button">Login</button>
+                <button type="button" id="signupButton" class="button" >Sign Up</button>
+            </div>
+
+            <!-- <p id="errorMessage" style="display:none;">Username or Password Invalid</p> -->
+        </form>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/secure-ls/dist/secure-ls.min.js"></script>
+    <script src="js/signup.js"></script>
+</body>
+
+</html>
