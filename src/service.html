@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en" class="h-100" data-bs-theme="auto">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pets Pets - Service</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/favicon.ico" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Krub:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="css/service.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- <link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/vendor/aos.css" />
+    <link rel="stylesheet" href="css/service.css" /> -->
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            width: 100%;
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .btn-bd-primary {
+            --bd-violet-bg: #712cf9;
+            --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+            --bs-btn-font-weight: 600;
+            --bs-btn-color: var(--bs-white);
+            --bs-btn-bg: var(--bd-violet-bg);
+            --bs-btn-border-color: var(--bd-violet-bg);
+            --bs-btn-hover-color: var(--bs-white);
+            --bs-btn-hover-bg: #6528e0;
+            --bs-btn-hover-border-color: #6528e0;
+            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+            --bs-btn-active-color: var(--bs-btn-hover-color);
+            --bs-btn-active-bg: #5a23c8;
+            --bs-btn-active-border-color: #5a23c8;
+        }
+
+        .bd-mode-toggle {
+            z-index: 1500;
+        }
+
+        .bd-mode-toggle .dropdown-menu .active .bi {
+            display: block !important;
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="sticky-footer-navbar.css" rel="stylesheet"> -->
+</head>
+
+<body class="d-flex flex-column h-100 cursor-enabled navbar-show navbar-end">
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol id="check2" viewBox="0 0 16 16">
+            <path
+                d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+        </symbol>
+        <symbol id="circle-half" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+        </symbol>
+        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+            <path
+                d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+            <path
+                d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+        </symbol>
+        <symbol id="sun-fill" viewBox="0 0 16 16">
+            <path
+                d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+        </symbol>
+    </svg>
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+        <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
+            aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+            <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+                <use href="#circle-half"></use>
+            </svg>
+            <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
+                    aria-pressed="false">
+                    <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+                        <use href="#sun-fill"></use>
+                    </svg>
+                    Light
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+                    aria-pressed="false">
+                    <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+                        <use href="#moon-stars-fill"></use>
+                    </svg>
+                    Dark
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
+                    aria-pressed="true">
+                    <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em">
+                        <use href="#circle-half"></use>
+                    </svg>
+                    Auto
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <h1 class="logo"><a href="index.html"><img src="assets/img/pets-logo-blue.svg" alt="PetsPets Logo" class="img-fluid"></a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo"><img src="./assets/pets-logo-15.svg" alt="" class="img-fluid"></a> -->
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto" href="./index.html">Home</a></li>
+                    <li><a class="nav-link scrollto" href="./about.html">About</a></li>
+                    <li><a class="nav-link scrollto active" href="./service.html">Services</a></li>
+                    <li><a class="nav-link scrollto" href="./shop.html">Products</a></li>
+                    <li><a class="nav-link scrollto" href="./contact_us.html">Contact</a></li>
+                    <li><a class="getstarted scrollto" id='loginLink' href="./login.html">Log in</a></li>
+                    <div class="dropdown">
+                        <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Languages
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="nav-link scrollto dropdown-en" onclick="changeLanguage('en')">English</a></li>
+                            <li><a class="nav-link scrollto dropdown-fr" onclick="changeLanguage('fr')">Français</a>
+                            </li>
+                        </ul>
+                    </div>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+
+
+    <!-- Begin page content -->
+    <main class="flex-shrink-0" data-new-gr-c-s-check-loaded="14.1152.0" data-gr-ext-installed="">
+        <div class="content-wrap" id="content-wrap">
+            <div class="py-160 min-vh-100 d-flex align-items-center position-relative lines-style-3">
+                <div class="line text-white"></div>
+                <div class="background bg-dark">
+                    <div class="background-image "><img src="assets/media/pexels-ivan-babydov-7788657.jpg" alt="">
+                    </div>
+                    <div class="background-color" style="background-color: rgb(14, 14, 14); opacity: 0.2;"></div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div data-aos="fade-right" class="col-12 col-lg-8 col-xl-7 aos-init aos-animate">
+                            <div class="headerContent text-white mb-0" data-i18n="service-slogan">Expert Care,<br> Your
+                                Pet's Joy.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="py-160">
+                <div class="mb-8 container">
+                    <div class="gh-1 gv-3 align-items-center justify-content-between mb-110 row">
+                        <div data-aos="fade-right" class="col-12 col-lg-6 aos-init aos-animate"><img class="w-100"
+                                src="assets/media/pet-spa.jpg" alt="">
+                        </div>
+                        <div data-aos="fade-left" class="col-12 ps-lg-0 col-lg-5 aos-init aos-animate">
+                            <h3 class="mb-n10" data-i18n="service-bath-title"></h3>
+                            <hr class="mt-30 mb-60">
+                            <p class="mt-n7" data-i18n="service-bath-intro"></p>
+                            <ul class="list mt-n7 mb-n8 font-size-18">
+                                <li data-i18n="service-bath-item1"></li>
+                                <li data-i18n="service-bath-item2"></li>
+                                <li data-i18n="service-bath-item3"></li>
+                                <li data-i18n="service-bath-item4"></li>
+                            </ul><a class="btn btn-dark btn-with-ball mt-60" href="#" data-i18n="service-reservation"
+                                data-i18n="service-reservation">Reservation<span class="btn-ball"
+                                    style="transform: translateY(0px);"></span></a>
+                        </div>
+                    </div>
+                    <div class="gh-1 gv-3 align-items-center justify-content-between mb-110 row">
+                        <div data-aos="fade-left" class="col-12 col-lg-6 order-lg-2 col aos-init aos-animate"><img
+                                class="w-100" src="assets/media/pet-hotel.jpg" alt="">
+                        </div>
+                        <div data-aos="fade-right"
+                            class="col-12 col-lg-5 order-lg-1 ps-lg-0 ms-lg-30 col aos-init aos-animate">
+                            <h3 class="mb-n10" data-i18n="service-hotel-title"></h3>
+                            <hr class="mt-30 mb-60">
+                            <p class="mt-n7" data-i18n="service-hotel-intro"></p>
+                            <ul class="list mt-n7 mb-n8 font-size-18">
+                                <li data-i18n="service-hotel-item1"></li>
+                                <li data-i18n="service-hotel-item2"></li>
+                                <li data-i18n="service-hotel-item3"></li>
+                                <li data-i18n="service-hotel-item4"></li>
+                            </ul><a class="btn btn-dark btn-with-ball mt-60" href="#"
+                                data-i18n="service-reservation">Reservation<span class="btn-ball"
+                                    style="transform: translateY(0px);"></span></a>
+                        </div>
+                    </div>
+                    <div class="gh-1 gv-3 align-items-center justify-content-between row">
+                        <div data-aos="fade-right" class="col-12 col-lg-6 aos-init aos-animate"><img class="w-100"
+                                src="assets/media/pet-groom.jpg" alt=""></div>
+                        <div data-aos="fade-left" class="col-12 ps-lg-0 col-lg-5 aos-init aos-animate">
+                            <h3 class="mb-n10" data-i18n="service-groom-title"></h3>
+                            <hr class="mt-30 mb-60">
+                            <p class="mt-n7" data-i18n="service-groom-intro"></p>
+                            <ul class="list mt-n7 mb-n8 font-size-18">
+                                <li data-i18n="service-groom-item1"></li>
+                                <li data-i18n="service-groom-item2"></li>
+                                <li data-i18n="service-groom-item3"></li>
+                                <li data-i18n="service-groom-item4"></li>
+                            </ul><a class="btn btn-dark btn-with-ball mt-60" href="#"
+                                data-i18n="service-reservation">Reservation<span class="btn-ball"
+                                    style="transform: translateY(0px);"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>PetsPets</h3>
+                        <p>
+                            333 Rue image <br>
+                            Kirkland, QC A1B 2C3<br>
+                            Canada <br><br>
+                            <strong>Phone:</strong> +1 123 456 7890<br>
+                            <strong>Email:</strong> Web3@web3.com<br>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Site Map</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Our Class</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Java</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">DataBase</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Front end</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                        <p><strong>Office Hours:</strong> Monday - Sunday(10:00 am - 9:00 pm) <br>
+                            All holidays and school vacations</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-md-flex py-4">
+
+            <div class="me-md-auto text-center text-md-start">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>PetsPets</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    Designed by <a href="https://bootstrapmade.com/">Web3</a>
+                </div>
+            </div>
+            <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+    <script src="js/vendor/color-modes.js"></script>
+    <script src="js/vendor/bootstrap.bundle.js"></script>
+    <script src="js/vendor/i18n/i18next.js"></script>
+    <script src="js/vendor/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        i18next
+            .init({
+                lng: 'en',
+                fallbackLng: 'en',
+                debug: true,
+                resources: {
+                    en: {
+                        translation: {
+                            "service-slogan": "Expert Care,<br> Your Pet's Joy",
+                            "service-bath-title": "Bubble Bliss Pet Spa",
+                            "service-bath-intro": "Bubble Bliss Pet Spa offers a luxurious and comforting bathing experience for pets. Understanding the importance of pet hygiene and wellness, we specialize in providing a serene and safe environment for your furry friends. ",
+                            "service-bath-item1": "Holistic Pet Care",
+                            "service-bath-item2": "Stress-Free Environment",
+                            "service-bath-item3": "Personalized Attention",
+                            "service-bath-item4": "Expert Team",
+
+                            "service-hotel-title": "Pet Resort",
+                            "service-hotel-intro": "Our Pets Hotel service offers a unique and luxurious home away from home for your furry family members. Understanding the concerns of pet owners when they need to travel, we've created a safe, fun, and comfortable environment for pets to stay. Our hotel is not just a boarding facility; it's a retreat for pets to enjoy their own vacation while their owners are away.",
+                            "service-hotel-item1": "Comfortable Accommodations",
+                            "service-hotel-item2": "Health and Safety Prioritized",
+                            "service-hotel-item3": "Engaging Activities",
+                            "service-hotel-item4": "Personalized Care",
+
+                            "service-groom-title": "Picture Perfect Pet Grooming",
+                            "service-groom-intro": "Picture Perfect Pet Grooming offers an innovative and delightful experience, combining professional pet grooming with a dedicated pet photography service. We understand the bond between pets and their owners and aim to capture and enhance that through our unique services. Our facility is designed to ensure that your pet not only looks their best but also feels comfortable and loved throughout the process.",
+                            "service-groom-item1": "Expert Grooming Services",
+                            "service-groom-item2": "Professional Pet Photography",
+                            "service-groom-item3": "Comfortable and Safe Environment",
+                            "service-groom-item4": "Personalized Experience",
+
+                            "service-reservation": "Reservition Service"
+                        }
+                    },
+                    fr: {
+                        translation: {
+                            "service-slogan": "Soin Expert,<br> Joie De Votre Animal",
+                            "service-bath-title": "Spa Bulle Bliss Pour Animaux",
+                            "service-bath-intro": "Spa Bulle Bliss pour Animaux offre une expérience de bain luxueuse et réconfortante pour les animaux de compagnie. Compréhendant l'importance de l'hygiène et du bien-être des animaux, nous nous spécialisons dans la fourniture d'un environnement serein et sécuritaire pour vos amis à fourrure. ",
+                            "service-bath-item1": "Soins Holistiques pour Animaux",
+                            "service-bath-item2": "Environnement Sans Stress",
+                            "service-bath-item3": "Attention Personnalisée",
+                            "service-bath-item4": "Équipe d'Experts",
+
+                            "service-hotel-title": "Complexe Hôtelier <br>Pour Animaux De Compagnie",
+                            "service-hotel-intro": "Notre service d'Hôtel pour Animaux offre un chez-soi unique et luxueux pour vos membres de la famille à fourrure lors de vos déplacements. Conscient des préoccupations des propriétaires d'animaux lorsqu'ils doivent voyager, nous avons créé un environnement sûr, amusant et confortable pour le séjour des animaux. Notre hôtel n'est pas seulement un établissement de pension ; c'est une retraite où les animaux peuvent profiter de leurs propres vacances pendant que leurs propriétaires sont absents.",
+                            "service-hotel-item1": "Hébergements Confortables",
+                            "service-hotel-item2": "Santé et Sécurité Priorisées",
+                            "service-hotel-item3": "Activités Stimulantes",
+                            "service-hotel-item4": "Soins Personnalisés",
+
+                            "service-groom-title": "Toilettage Parfait <br>Pour Animaux De Compagnie",
+                            "service-groom-intro": "Toilettage Parfait pour Animaux de Compagnie offre une expérience innovante et agréable, combinant le toilettage professionnel des animaux avec un service dédié de photographie pour animaux de compagnie. Nous comprenons le lien entre les animaux de compagnie et leurs propriétaires et visons à capturer et à améliorer cela à travers nos services uniques. Notre établissement est conçu pour garantir que votre animal de compagnie non seulement paraît sous son meilleur jour, mais se sente également à l'aise et aimé tout au long du processus.",
+                            "service-groom-item1": "Services de Toilettage Experts",
+                            "service-groom-item2": "Photographie Professionnelle pour Animaux de Compagnie",
+                            "service-groom-item3": "Environnement Confortable et Sûr",
+                            "service-groom-item4": "Expérience Personnalisée",
+
+                            "service-reservation": "Service de Réservation"
+                        }
+                    }
+                }
+            }, function (err, t) {
+                // init set content
+                updateContent();
+            });
+        i18next.on('languageChanged', () => {
+            updateContent();
+        });
+        function changeLanguage(lng) {
+            i18next.changeLanguage(lng);
+        }
+        function updateContent() {
+            document.querySelectorAll('[data-i18n]').forEach((el) => {
+                el.innerHTML = i18next.t(el.getAttribute('data-i18n'));
+            });
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/secure-ls/dist/secure-ls.min.js"></script>
+    <script src="./js/signup.js"></script>
+</body>
+
+</html>
