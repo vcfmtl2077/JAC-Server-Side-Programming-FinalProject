@@ -6,13 +6,12 @@ include("../model/CustomerModel.php");
 function CustomerController($pathArray, $method, $data)
 {
 
-    // controller logic
+    // controller logic for api GET http://localhost:9000/api/v1/customer/1
     if (count($pathArray) == 1 && $method == "GET") {
         getCustomerInfo($pathArray[0]);
     }
-    error_log("". json_encode($data));
-    error_log($method);
-    error_log(count($pathArray));
+
+  // controller logic for api POST http://localhost:9000/api/v1/customer
     if (count($pathArray) == 0 && $method == "POST") {
         if (isset($data)) {
             createCustomer($data);
