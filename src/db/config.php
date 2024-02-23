@@ -9,8 +9,8 @@ $password_file_path = getenv('PASSWORD_FILE_PATH');
 $db_pass = trim(file_get_contents($password_file_path));
 
 // $con=mysqli_connect("localhost", "root", "", "jac");
-$con = mysqli_connect($db_host, $db_user, $db_pass) or die(" can not establish connection ");
-mysqli_select_db($con, $db_name);
+$GLOBALS['dbconn'] = mysqli_connect($db_host, $db_user, $db_pass) or die(" can not establish connection ");
+mysqli_select_db($GLOBALS['dbconn'], $db_name);
 if(mysqli_connect_errno())
 {
 echo "Connection Fail".mysqli_connect_error();
