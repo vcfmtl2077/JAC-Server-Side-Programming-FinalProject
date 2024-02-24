@@ -10,7 +10,7 @@ RUN --mount=type=bind,source=composer.json,target=composer.json \
 FROM php:8.2-apache as final
 RUN docker-php-ext-install pdo pdo_mysql mysqli
 # Enable mod_rewrite for Apache
-RUN a2enmod rewrite
+RUN a2enmod rewrite headers
 
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 COPY --from=deps app/vendor/ /var/www/html/vendor
@@ -24,6 +24,11 @@ RUN echo 'RewriteEngine On\n\
 RewriteCond %{REQUEST_FILENAME} !-d\n\
 RewriteCond %{REQUEST_FILENAME} !-f\n\
 RewriteRule ^(.*)$ router/router.php [L]' > /var/www/html/.htaccess
+RUN echo '<IfModule mod_headers.c>\n\
+    Header set Access-Control-Allow-Origin "*"\n\
+    Header set Access-Control-Allow-Methods "POST, GET, OPTIONS, DELETE, PUT"\n\
+    Header set Access-Control-Allow-Headers "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"\n\
+</IfModule>' >> /var/www/html/.htaccess
 RUN chmod 644 /var/www/html/.htaccess
 
 USER www-data
