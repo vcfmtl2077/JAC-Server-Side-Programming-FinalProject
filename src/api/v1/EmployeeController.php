@@ -8,7 +8,7 @@ function EmployeeController($pathArray, $method, $data)
 
     // controller logic for api GET http://localhost:9000/api/v1/Employee
     if (count($pathArray) == 0 && $method == "GET") {
-        getAllEmployee();
+        getAllEmployees();
     }
     // controller logic for api GET http://localhost:9000/api/v1/Employee/1
     if (count($pathArray) == 1 && $method == "GET") {
@@ -46,7 +46,7 @@ function getAllEmployee(){
 
 function getEmployeeInfo($id)
 {
-    $Employee = fetchEmployeeByID($id);
+    $Employee = getEmployeeByID($id);
 
     if (isset($Employee)) {
         $response['EmployeeID'] = $Employee['Employee_id'];
