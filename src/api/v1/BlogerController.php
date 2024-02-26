@@ -28,11 +28,11 @@ function getBlogerInfo($id)
     $Bloger = fetchBlogerByID($id);
 
     if (isset($Bloger)) {
-        $response['BlogerID'] = $Bloger['bloger_id'];
+        $response['BlogerID'] = $Bloger['blog_id'];
         $response['Title'] = $Bloger['title'];
         $response['Content'] = $Bloger['content'];
         $response['Author'] = $Bloger['author'];
-        $response['Publish_data'] = $Bloger['publish_data'];
+        $response['Publish_data'] = $Bloger['publish_date'];
         echo json_encode($response, JSON_PRETTY_PRINT);
     } else {
         echo json_encode(array("message" => "No result found.", "status" => false, "code" => "4101"), JSON_PRETTY_PRINT);
