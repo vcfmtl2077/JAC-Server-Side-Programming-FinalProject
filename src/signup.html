@@ -46,13 +46,23 @@
             </div>
 
             <div class="input-group">
+                <label for="Date of Birth">Date of Birth *</label>
+                <input type="date" id="dob" name="dob" placeholder="Your birthday.." required>
+            </div>
+
+            <div class="input-group">
                 <label for="email">Email * </label>
                 <input type="email" id="email" name="email" placeholder="Email.." required>
             </div>
 
             <div class="input-group">
-                <label for="telephone">Telephone </label>
-                <input type="tel" id="telephone" name="telephone" >
+                <label for="telephone">Telephone *</label>
+                <input type="tel" id="telephone" name="telephone" required>
+            </div>
+
+            <div class="input-group">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" placeholder="Your City.." >
             </div>
 
             <div class="input-group">
@@ -64,21 +74,25 @@
                     <option value="British Columbia">British Columbia</option>
                 </select>
             </div>
+
             <div class="input-group">
-                <label for="city">City *</label>
-                <input type="text" id="city" name="lastName" placeholder="Your City.." required>
-            </div>
-            <div class="input-group dob">
-                <label>Date of Birth</label>
-                <select id="year" name="year"></select>
-                <select id="month" name="month"></select>
-                <select id="day" name="day"></select>
+                <label for="postcode">Postcode *</label>
+                <input type="text" id="postcode" name="postcode" placeholder="Your postcode.." required>
             </div>
 
             <div class="input-group btn">
                 <button type="submit" class="button">Sign Up</button>
                 <button type="reset" class="button">Reset</button>
             </div>
+
+            <div class = "input-group text-center">
+                <span>Already have an account?</span>
+                <a href="login.html" class="account-link">
+                    <span>Login instead</span>
+                </a>
+            </div>
+
+
         </form>
 
     <script src="https://cdn.jsdelivr.net/npm/secure-ls/dist/secure-ls.min.js"></script>

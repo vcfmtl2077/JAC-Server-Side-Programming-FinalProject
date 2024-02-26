@@ -1,5 +1,5 @@
 body, html {
-    height: 100%;
+    height: 90%;
     margin: 0;
     font-family: Arial, sans-serif;
     padding-top: 60px;
@@ -180,6 +180,7 @@ body, html {
     color: white;
     padding: 10px 40px;
     margin-top: 40px;
+    margin-bottom: 40px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -205,6 +206,18 @@ body, html {
     background-color: #377ec8;
 }
 
+.text-center {
+    text-align: center;
+}
+
+.account-link {
+    text-decoration: none; 
+    /* color: #377ec8; */
+}
+
+.account-link:hover {
+    text-decoration: underline; 
+}
 /* Handle layout for smaller screens */
 @media (max-width: 768px) {
     .form-container {
