@@ -90,6 +90,32 @@
       </div>
     </section><!-- End About Section -->
 
+    <div class="container-xxl flex-grow-1 container-p-y">
+      <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Tables</h4>
+
+      <!-- Basic Bootstrap Table -->
+      <div class="card">
+        <h5 class="card-header">Your orders</h5>
+        <div class="table-responsive text-nowrap">
+          <table class="table" id="customer-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Order_id</th>
+                <th>Order_date</th>
+                <th>Product_name</th>
+                <th>Quantity</th>
+                <th>Total_amount</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="order-list">
+              <!-- Customer list will be loaded here by the customer-list.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
 
   </main><!-- End #main -->
 
@@ -177,6 +203,7 @@
   <script src="assets/js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/secure-ls/dist/secure-ls.min.js"></script>
   <script src="./js/signup.js"></script>
+  <script src="./js/profile.js"></script>
 
 </body>
 

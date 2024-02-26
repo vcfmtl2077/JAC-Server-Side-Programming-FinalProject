@@ -37,9 +37,24 @@
                 <input type="password" id="password" name="password" placeholder="Your password.." required>
             </div>
 
+            <div class="input-group">
+                <label for="role">Role *</label>
+                <select id="role" required>
+                    <option value="user">User</option>
+                    <option value="employee">Employee</option>
+                </select>
+            </div>
+
             <div class="input-group btn">
                 <button type="submit" class="button">Login</button>
-                <button type="button" id="signupButton" class="button" >Sign Up</button>
+                <button type="reset" class="button">Reset</button>
+            </div>
+
+            <div class = "input-group text-center" >
+                <span>New on our platform?</span>
+                <a href="signup.html" class="account-link">
+                    <span>Create an account</span>
+                </a>
             </div>
 
             <!-- <p id="errorMessage" style="display:none;">Username or Password Invalid</p> -->
