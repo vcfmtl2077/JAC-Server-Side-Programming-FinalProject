@@ -35,7 +35,9 @@ if(array_key_exists($pathArray[2],$controllerRegistry)) {
     $controllerName = $controllerRegistry[$pathArray[2]];
     if (file_exists($controllerFile)) {
         include($controllerFile);
-        if (function_exists($controllerName)) {
+        
+        // avoid the request uri follows api/v1/aaa/bbb/, '/' at the end
+        if (function_exists($controllerName)&&$parms[0]!=null) {
             // Invoke the function with parameters
             call_user_func_array($controllerName, [$parms, $_SERVER['REQUEST_METHOD'], $data]);
         } else {
