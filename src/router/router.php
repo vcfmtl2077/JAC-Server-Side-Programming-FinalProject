@@ -26,7 +26,10 @@ if (!isset($pathArray[1]) || $pathArray[1] !== 'v1') {
 $controllerRegistry = [
     'customer' => 'CustomerController',
     'user' => 'UserController',
-    'employee' => 'EmployeeController'
+    'employee' => 'EmployeeController',
+    'permission' => 'PermissionController',
+    'product' => 'ProductController',
+    'auth' => 'AuthenticationController'
 ];
 
 $parms = array_slice($pathArray, 3);
