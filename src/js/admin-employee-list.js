@@ -47,7 +47,7 @@ function populateTable(data) {
                         + item.first_name + "</td><td>" 
                         + item.last_name + "</td><td>" 
                         + item.phone_number 
-                        + "</td><td><button>Edit</button><button>Delete</button></td>";;
+                        + "</td><td><button>Edit</button>  <button>Delete</button></td>";;
         tableBody.appendChild(row);
     });
 }
