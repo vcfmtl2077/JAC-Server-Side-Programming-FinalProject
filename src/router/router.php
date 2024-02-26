@@ -9,6 +9,15 @@ for ($i = 0; $i < sizeof($scriptName); $i++) {
     }
 }
 $pathArray = array_values($requestURI);
+$root = (!empty($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/';
+$pathLength = count($pathArray);
+$page = explode('.', $pathArray[$pathLength-1]);
+error_log(print_r($page,true));
+error_log(print_r($root,true));
+//redirect missing *.html request to 404 page
+if(isset($page[1]) && $page[1] == 'html') {
+    header('Location: '.$root.'/admin/admin-404-page.html');
+}
 
 //get json body parms
 $data = json_decode(file_get_contents("php://input"), true);
