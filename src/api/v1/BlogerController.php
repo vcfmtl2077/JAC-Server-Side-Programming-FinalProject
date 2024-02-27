@@ -2,7 +2,8 @@
 // profile.php
 include("../model/BlogerModel.php");
 
-// same name with file name for router invoke
+// same name with file name for router invokes
+
 function BlogerController($pathArray, $method, $data)
 {
 
