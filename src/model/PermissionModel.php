@@ -14,6 +14,17 @@ function fetchPermissionByID($id)
     }
 }
 
+function fetchAllPermission(){
+    $stmt = $GLOBALS['dbconn']->prepare("Select * from RolePermission");
+    if (mysqli_stmt_execute($stmt)) {
+        $result = mysqli_stmt_get_result($stmt);
+        $customer = $result->fetch_all(MYSQLI_ASSOC);;
+        return $customer;
+    } else {
+        echo json_encode(array("message" => "Qeury Failed!", "status" => false, "code" => "6101"), JSON_PRETTY_PRINT);
+    }
+}
+
 function createSignleRolePermission($data)
 {
     $insertKey = "(";
@@ -27,7 +38,7 @@ function createSignleRolePermission($data)
     $insertKey = substr($insertKey,0,strlen($insertKey)-1).")";
     $insertValue = substr($insertValue,0,strlen($insertValue)-1).")";
     $sql = "INSERT INTO RolePermission ".$insertKey." VALUES ".$insertValue;
-    // error_log(print_r($sql,true));
+    error_log(print_r($sql,true));
     $query=mysqli_query($GLOBALS['dbconn'],$sql);
     return $query;
 }
@@ -52,7 +63,7 @@ function updateSignleRolePermission($data)
 function deleteSignleRolePermission($id)
 {
     $sql = "DELETE FROM RolePermission WHERE (role_id='$id')";
-    error_log(print_r($sql,true));
+    // error_log(print_r($sql,true));
     $query=mysqli_query($GLOBALS['dbconn'],$sql);
     return $query;
 }

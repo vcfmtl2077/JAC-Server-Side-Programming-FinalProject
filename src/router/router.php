@@ -39,7 +39,8 @@ $controllerRegistry = [
     'permission' => 'PermissionController',
     'product' => 'ProductController',
     'auth' => 'AuthenticationController',
-    'bloger' => 'BlogerController'
+    'bloger' => 'BlogerController',
+    'product' => 'ProductController'
 ];
 
 $parms = array_slice($pathArray, 3);
