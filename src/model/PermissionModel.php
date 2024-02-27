@@ -38,7 +38,7 @@ function createSignleRolePermission($data)
     $insertKey = substr($insertKey,0,strlen($insertKey)-1).")";
     $insertValue = substr($insertValue,0,strlen($insertValue)-1).")";
     $sql = "INSERT INTO RolePermission ".$insertKey." VALUES ".$insertValue;
-    // error_log(print_r($sql,true));
+    error_log(print_r($sql,true));
     $query=mysqli_query($GLOBALS['dbconn'],$sql);
     return $query;
 }

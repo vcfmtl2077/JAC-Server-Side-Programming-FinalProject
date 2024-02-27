@@ -980,7 +980,7 @@
                     <form id="addRoleForm" class="row g-3" onsubmit="return false">
                       <div class="col-12 mb-4">
                         <label class="form-label" for="modalRoleName">Role Name</label>
-                        <input type="text" id="modalRoleName" name="modalRoleName" class="form-control"
+                        <input type="text" id="modalRoleName" name="role_name" class="form-control"
                           placeholder="Enter a role name" tabindex="-1" />
                       </div>
                       <div class="col-12">
@@ -997,9 +997,9 @@
                                   <div class="position-relative" data-select2-id="44"><select id="select2Basic"
                                       class="select2 form-select form-select-lg select2-hidden-accessible"
                                       data-allow-clear="true" data-select2-id="select2Basic" tabindex="-1"
-                                      aria-hidden="true">
-                                      <option value="Active" data-select2-id="2">Active</option>
-                                      <option value="Inactive" data-select2-id="50">Inactive</option>
+                                      aria-hidden="true" name="role_status">
+                                      <option name="role_status" value="active" data-select2-id="2">Active</option>
+                                      <option name="role_status" value="active" data-select2-id="50">Inactive</option>
                                     </select></div>
                                 </td>
                               </tr>
@@ -1008,25 +1008,25 @@
                                 <td>
                                   <div class="d-flex">
                                     <div class="form-check me-3 me-lg-5">
-                                      <input class="form-check-input" type="checkbox" id="permission_create" />
+                                      <input class="form-check-input" type="checkbox" id="permission_create" name="permission_create"/>
                                       <label class="form-check-label" for="permission_create">
                                         Create
                                       </label>
                                     </div>
                                     <div class="form-check me-3 me-lg-5">
-                                      <input class="form-check-input" type="checkbox" id="permission_read" />
+                                      <input class="form-check-input" type="checkbox" id="permission_read" name="permission_read"/>
                                       <label class="form-check-label" for="permission_read" value="1">
                                         Read
                                       </label>
                                     </div>
                                     <div class="form-check me-3 me-lg-5">
-                                      <input class="form-check-input" type="checkbox" id="permission_update" />
+                                      <input class="form-check-input" type="checkbox" id="permission_update" name="permission_update"/>
                                       <label class="form-check-label" for="permission_update">
                                         Update
                                       </label>
                                     </div>
                                     <div class="form-check me-3 me-lg-5">
-                                      <input class="form-check-input" type="checkbox" id="permission_delete" />
+                                      <input class="form-check-input" type="checkbox" id="permission_delete" name="permission_delete"/>
                                       <label class="form-check-label" for="permission_delete">
                                         Delete
                                       </label>
@@ -1040,25 +1040,25 @@
                                 <td>
                                   <div class="d-flex">
                                     <div class="form-check me-3 me-lg-5">
-                                      <input class="form-check-input" type="checkbox" id="employee_create" />
+                                      <input class="form-check-input" type="checkbox" id="employee_create" name="employee_create"/>
                                       <label class="form-check-label" for="employee_create">
                                         Create
                                       </label>
                                     </div>
                                     <div class="form-check me-3 me-lg-5">
-                                      <input class="form-check-input" type="checkbox" id="employee_read" />
+                                      <input class="form-check-input" type="checkbox" id="employee_read" name="employee_read"/>
                                       <label class="form-check-label" for="employee_read" value="1">
                                         Read
                                       </label>
                                     </div>
                                     <div class="form-check me-3 me-lg-5">
-                                      <input class="form-check-input" type="checkbox" id="employee_update" />
+                                      <input class="form-check-input" type="checkbox" id="employee_update" name="employee_update"/>
                                       <label class="form-check-label" for="employee_update">
                                         Update
                                       </label>
                                     </div>
                                     <div class="form-check me-3 me-lg-5">
-                                      <input class="form-check-input" type="checkbox" id="employee_delete" />
+                                      <input class="form-check-input" type="checkbox" id="employee_delete" name="employee_delete"/>
                                       <label class="form-check-label" for="employee_delete">
                                         Delete
                                       </label>
@@ -1072,25 +1072,25 @@
                                 <td>
                                   <div class="d-flex">
                                     <div class="form-check me-3 me-lg-5">
-                                      <input class="form-check-input" type="checkbox" id="customer_create" />
+                                      <input class="form-check-input" type="checkbox" id="customer_create" name="customer_create"/>
                                       <label class="form-check-label" for="customer_create">
                                         Create
                                       </label>
                                     </div>
                                     <div class="form-check me-3 me-lg-5">
-                                      <input class="form-check-input" type="checkbox" id="customer_read" />
+                                      <input class="form-check-input" type="checkbox" id="customer_read" name="customer_read"/>
                                       <label class="form-check-label" for="customer_read" value="1">
                                         Read
                                       </label>
                                     </div>
                                     <div class="form-check me-3 me-lg-5">
-                                      <input class="form-check-input" type="checkbox" id="customer_update" />
+                                      <input class="form-check-input" type="checkbox" id="customer_update" name="customer_update"/>
                                       <label class="form-check-label" for="customer_update">
                                         Update
                                       </label>
                                     </div>
                                     <div class="form-check me-3 me-lg-5">
-                                      <input class="form-check-input" type="checkbox" id="customer_delete" />
+                                      <input class="form-check-input" type="checkbox" id="customer_delete" name="customer_delete"/>
                                       <label class="form-check-label" for="customer_delete">
                                         Delete
                                       </label>
@@ -1104,25 +1104,25 @@
                                 <td>
                                   <div class="d-flex">
                                     <div class="form-check me-3 me-lg-5">
-                                      <input class="form-check-input" type="checkbox" id="product_create" />
+                                      <input class="form-check-input" type="checkbox" id="product_create" name="product_create"/>
                                       <label class="form-check-label" for="product_create">
                                         Create
                                       </label>
                                     </div>
                                     <div class="form-check me-3 me-lg-5">
-                                      <input class="form-check-input" type="checkbox" id="product_read" />
+                                      <input class="form-check-input" type="checkbox" id="product_read" name="product_read"/>
                                       <label class="form-check-label" for="product_read" value="1">
                                         Read
                                       </label>
                                     </div>
                                     <div class="form-check me-3 me-lg-5">
-                                      <input class="form-check-input" type="checkbox" id="product_update" />
+                                      <input class="form-check-input" type="checkbox" id="product_update" name="product_update"/>
                                       <label class="form-check-label" for="product_update">
                                         Update
                                       </label>
                                     </div>
                                     <div class="form-check me-3 me-lg-5">
-                                      <input class="form-check-input" type="checkbox" id="product_delete" />
+                                      <input class="form-check-input" type="checkbox" id="product_delete" name="product_delete"/>
                                       <label class="form-check-label" for="product_delete">
                                         Delete
                                       </label>
@@ -1136,25 +1136,25 @@
                                 <td>
                                   <div class="d-flex">
                                     <div class="form-check me-3 me-lg-5">
-                                      <input class="form-check-input" type="checkbox" id="order_create" />
+                                      <input class="form-check-input" type="checkbox" id="order_create" name="order_create"/>
                                       <label class="form-check-label" for="order_create">
                                         Create
                                       </label>
                                     </div>
                                     <div class="form-check me-3 me-lg-5">
-                                      <input class="form-check-input" type="checkbox" id="order_read" />
+                                      <input class="form-check-input" type="checkbox" id="order_read" name="order_read"/>
                                       <label class="form-check-label" for="orderr_read" value="1">
                                         Read
                                       </label>
                                     </div>
                                     <div class="form-check me-3 me-lg-5">
-                                      <input class="form-check-input" type="checkbox" id="order_update" />
+                                      <input class="form-check-input" type="checkbox" id="order_update" name="order_update"/>
                                       <label class="form-check-label" for="order_update">
                                         Update
                                       </label>
                                     </div>
                                     <div class="form-check me-3 me-lg-5">
-                                      <input class="form-check-input" type="checkbox" id="order_delete" />
+                                      <input class="form-check-input" type="checkbox" id="order_delete" name="order_delete"/>
                                       <label class="form-check-label" for="order_delete">
                                         Delete
                                       </label>
@@ -1168,25 +1168,25 @@
                                 <td>
                                   <div class="d-flex">
                                     <div class="form-check me-3 me-lg-5">
-                                      <input class="form-check-input" type="checkbox" id="blog_create" />
+                                      <input class="form-check-input" type="checkbox" id="blog_create" name="blog_create"/>
                                       <label class="form-check-label" for="blog_create">
                                         Create
                                       </label>
                                     </div>
                                     <div class="form-check me-3 me-lg-5">
-                                      <input class="form-check-input" type="checkbox" id="blog_read" />
+                                      <input class="form-check-input" type="checkbox" id="blog_read" name="blog_read"/>
                                       <label class="form-check-label" for="blog_read" value="1">
                                         Read
                                       </label>
                                     </div>
                                     <div class="form-check me-3 me-lg-5">
-                                      <input class="form-check-input" type="checkbox" id="blog_update" />
+                                      <input class="form-check-input" type="checkbox" id="blog_update" name="blog_update"/>
                                       <label class="form-check-label" for="blog_update">
                                         Update
                                       </label>
                                     </div>
                                     <div class="form-check me-3 me-lg-5">
-                                      <input class="form-check-input" type="checkbox" id="blog_delete" />
+                                      <input class="form-check-input" type="checkbox" id="blog_delete" name="blog_delete"/>
                                       <label class="form-check-label" for="blog_delete">
                                         Delete
                                       </label>
@@ -1290,7 +1290,8 @@
 
   <!-- Vendors JS -->
   <script>
-    this.getALlRole();
+    this.getAllRole();
+    document.getElementById('addRoleForm').addEventListener('submit', createRolePermission);
   </script>
   <!-- Main JS -->
   <script src="../assets/js/main.js"></script>

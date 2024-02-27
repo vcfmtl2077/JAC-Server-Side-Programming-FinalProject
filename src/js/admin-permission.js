@@ -1,4 +1,6 @@
-function getALlRole() {
+
+
+function getAllRole() {
     var baseUrl = window.location.origin;  // Gets 'http://localhost:9000'
     var apiUrl = baseUrl + "/api/v1/permission";
     $.get(apiUrl, function(data) {
@@ -52,5 +54,53 @@ function getALlRole() {
             `);
             tableBody.append(row);
         }
+    });
+}
+
+function createRolePermission(){
+    event.preventDefault(); // Prevent the default form submission
+  
+    // Access the form element
+    var form = document.getElementById('addRoleForm');
+  
+    // Create an object to hold the form data
+    var formDataObj = {};
+  
+    // Populate the formDataObj with form values
+    new FormData(form).forEach((value, key) => {
+        // console.log(key);
+        // Check if the field is a checkbox
+        if(value==='on'){
+            formDataObj[key] = 1;
+        }else {
+            // For other fields, just use the value directly
+            formDataObj[key] = value;
+        }
+    });
+  
+    // Use Fetch API to send the form data as JSON
+    var baseUrl = window.location.origin;  
+    var apiUrl = baseUrl + "/api/v1/permission";
+    fetch(apiUrl, {
+        method: 'POST',
+        body: JSON.stringify(formDataObj),
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Here you can handle the response, e.g., show a success message or redirect
+        alert('Success:', data);
+        window.location.href = baseUrl+"/admin/admin-permission.html";
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+        // Here you can handle the error, e.g., show an error message
     });
 }
