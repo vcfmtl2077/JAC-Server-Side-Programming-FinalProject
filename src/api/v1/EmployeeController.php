@@ -8,7 +8,7 @@ function EmployeeController($pathArray, $method, $data)
 
     // controller logic for api GET http://localhost:9000/api/v1/Employee
     if (count($pathArray) == 0 && $method == "GET") {
-        getAllEmployees();
+        getAllEmployee();
     }
     // controller logic for api GET http://localhost:9000/api/v1/Employee/1
     if (count($pathArray) == 1 && $method == "GET") {
@@ -29,15 +29,14 @@ function EmployeeController($pathArray, $method, $data)
 
 function getAllEmployee(){
 
-    $Employee = getEmployeeList();
-
+    $Employee = getAllEmployees();
     if (isset($Employee)) {
-        $response['EmployeeID'] = $Employee['Employee_id'];
-        $response['FirstName'] = $Employee['first_name'];
-        $response['LastName'] = $Employee['last_name'];
-        $response['email'] = $Employee['email'];
-        $response['telephone'] = $Employee['telephone'];
-        echo json_encode($response, JSON_PRETTY_PRINT);
+        // $response['EmployeeID'] = $Employee['Employee_id'];
+        // $response['FirstName'] = $Employee['first_name'];
+        // $response['LastName'] = $Employee['last_name'];
+        // $response['email'] = $Employee['email'];
+        // $response['telephone'] = $Employee['telephone'];
+        echo json_encode($Employee, JSON_PRETTY_PRINT);
     } else {
         echo json_encode(array("message" => "No result found.", "status" => false, "code" => "4101"), JSON_PRETTY_PRINT);
     }
@@ -49,11 +48,11 @@ function getEmployeeInfo($id)
     $Employee = getEmployeeByID($id);
 
     if (isset($Employee)) {
-        $response['EmployeeID'] = $Employee['Employee_id'];
+        $response['EmployeeID'] = $Employee['employee_id'];
         $response['FirstName'] = $Employee['first_name'];
         $response['LastName'] = $Employee['last_name'];
         $response['email'] = $Employee['email'];
-        $response['telephone'] = $Employee['telephone'];
+        $response['telephone'] = $Employee['phone_number'];
         echo json_encode($response, JSON_PRETTY_PRINT);
     } else {
         echo json_encode(array("message" => "No result found.", "status" => false, "code" => "4101"), JSON_PRETTY_PRINT);

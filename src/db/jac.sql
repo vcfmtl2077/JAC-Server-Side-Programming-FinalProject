@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Feb 26, 2024 at 09:01 PM
+-- Generation Time: Feb 27, 2024 at 03:38 AM
 -- Server version: 11.2.3-MariaDB-1:11.2.3+maria~ubu2204
 -- PHP Version: 8.2.16
 
@@ -82,6 +82,13 @@ CREATE TABLE `Customer` (
   `registration_date` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `Customer`
+--
+
+INSERT INTO `Customer` (`customer_id`, `username`, `password`, `first_name`, `last_name`, `dob`, `email`, `telephone`, `city`, `province`, `postcode`, `registration_date`) VALUES
+(22, 'lin', '25d55ad283aa400af464c76d713c07ad', 'lin', 'nan', '2024-02-01', 'nan@gmail.com', '1234554321', 'Ontario', 'Quebec', 'H9J5C3', '2024-02-27 02:37:36');
+
 -- --------------------------------------------------------
 
 --
@@ -89,46 +96,22 @@ CREATE TABLE `Customer` (
 --
 
 CREATE TABLE `Employee` (
-  `employee_id` int(4) NOT NULL,
-  `first_name` varchar(100) NOT NULL,
-  `last_name` varchar(100) NOT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `department` varchar(100) DEFAULT NULL,
-  `phone_number` varchar(20) DEFAULT NULL,
-  `address` varchar(255) DEFAULT NULL,
-  `password` varchar(255) NOT NULL
+  `id` int(11) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `role` varchar(50) DEFAULT NULL,
+  `join_date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `Employee`
 --
 
-INSERT INTO `Employee` (`employee_id`, `first_name`, `last_name`, `email`, `department`, `phone_number`, `address`, `password`) VALUES
-(1, 'John', 'Doe', 'john.doe@example.com', 'HR', '1234567890', '123 Main St', ''),
-(2, 'Jane', 'Smith', 'jane.smith@example.com', 'Marketing', '2345678901', '456 Elm St', ''),
-(3, 'Michael', 'Johnson', 'michael.johnson@example.com', 'Sales', '3456789012', '789 Oak St', ''),
-(4, 'Emily', 'Brown', 'emily.brown@example.com', 'Finance', '4567890123', '101 Pine St', ''),
-(5, 'William', 'Taylor', 'william.taylor@example.com', 'IT', '5678901234', '202 Maple St', ''),
-(6, 'Olivia', 'Anderson', 'olivia.anderson@example.com', 'HR', '6789012345', '303 Cedar St', ''),
-(7, 'James', 'Wilson', 'james.wilson@example.com', 'Marketing', '7890123456', '404 Birch St', ''),
-(8, 'Sophia', 'Martinez', 'sophia.martinez@example.com', 'Sales', '8901234567', '505 Oak St', ''),
-(9, 'Benjamin', 'Hernandez', 'benjamin.hernandez@example.com', 'Finance', '9012345678', '606 Elm St', ''),
-(10, 'Isabella', 'Garcia', 'isabella.garcia@example.com', 'IT', '0123456789', '707 Pine St', ''),
-(11, 'Liam', 'Lopez', 'liam.lopez@example.com', 'HR', '1234567890', '808 Maple St', ''),
-(12, 'Emma', 'Young', 'emma.young@example.com', 'Marketing', '2345678901', '909 Cedar St', ''),
-(13, 'Noah', 'Scott', 'noah.scott@example.com', 'Sales', '3456789012', '1010 Birch St', ''),
-(14, 'Ava', 'King', 'ava.king@example.com', 'Finance', '4567890123', '1111 Oak St', ''),
-(15, 'Ethan', 'Clark', 'ethan.clark@example.com', 'IT', '5678901234', '1212 Elm St', ''),
-(16, 'Mia', 'Baker', 'mia.baker@example.com', 'HR', '6789012345', '1313 Pine St', ''),
-(17, 'Lucas', 'Allen', 'lucas.allen@example.com', 'Marketing', '7890123456', '1414 Cedar St', ''),
-(18, 'Charlotte', 'Nelson', 'charlotte.nelson@example.com', 'Sales', '8901234567', '1515 Birch St', ''),
-(19, 'Mason', 'Carter', 'mason.carter@example.com', 'Finance', '9012345678', '1616 Oak St', ''),
-(20, 'Amelia', 'Hill', 'amelia.hill@example.com', 'IT', '0123456789', '1717 Elm St', ''),
-(111, 'Wang', 'Ceng', 'wanceng@gmail.com', '', '', '', ''),
-(123, 'Shuo', 'Li', 'nan.lin@example.com', '', '', '', ''),
-(144, 'Wang', 'Ceng', 'wangceng@gmail.com', NULL, NULL, NULL, ''),
-(152, 'wangceng@example.com', 'wang', 'ceng', 'IT', '1234567890', '123 Rue ABC', ''),
-(888, 'Shuo', 'Li', 'nan.lin@example.com', '', '', '', '');
+INSERT INTO `Employee` (`id`, `username`, `name`, `password`, `email`, `role`, `join_date`) VALUES
+(123, 'shuo', 'shuo', '6e49afc637a65739c0f82e5887e40d5c', 'shuo@gmail.com', 'admin', '2024-02-01'),
+(123, 'shuo', 'shuo', '6e49afc637a65739c0f82e5887e40d5c', 'shuo@gmail.com', 'admin', '2024-02-01');
 
 -- --------------------------------------------------------
 
@@ -212,13 +195,41 @@ CREATE TABLE `Product` (
 --
 
 CREATE TABLE `RolePermission` (
-  `role_id` varchar(100) DEFAULT NULL,
+  `role_id` int(11) NOT NULL,
   `role_name` varchar(100) DEFAULT NULL,
-  `create_permision` varchar(100) DEFAULT NULL,
-  `read_permission` varchar(100) DEFAULT NULL,
-  `update_permision` varchar(100) DEFAULT NULL,
-  `delete_permission` varchar(100) DEFAULT NULL
+  `permision_create` int(11) DEFAULT NULL,
+  `permission_read` int(11) DEFAULT NULL,
+  `permision_update` int(11) DEFAULT NULL,
+  `permission_delete` int(11) DEFAULT NULL,
+  `role_status` varchar(100) DEFAULT NULL,
+  `employee_create` int(11) DEFAULT NULL,
+  `employee_read` int(11) DEFAULT NULL,
+  `employee_update` int(11) DEFAULT NULL,
+  `employee_delete` int(11) DEFAULT NULL,
+  `customer_read` int(11) DEFAULT NULL,
+  `customer_create` int(11) DEFAULT NULL,
+  `blog_delete` int(11) DEFAULT NULL,
+  `order_delete` int(11) DEFAULT NULL,
+  `customer_update` int(11) DEFAULT NULL,
+  `product_create` int(11) DEFAULT NULL,
+  `product_read` int(11) DEFAULT NULL,
+  `product_update` int(11) DEFAULT NULL,
+  `order_create` int(11) DEFAULT NULL,
+  `order_read` int(11) DEFAULT NULL,
+  `order_update` int(11) DEFAULT NULL,
+  `blog_create` int(11) DEFAULT NULL,
+  `blog_read` int(11) DEFAULT NULL,
+  `blog_update` int(11) DEFAULT NULL,
+  `customer_delete` int(11) DEFAULT NULL,
+  `product_delete` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `RolePermission`
+--
+
+INSERT INTO `RolePermission` (`role_id`, `role_name`, `permision_create`, `permission_read`, `permision_update`, `permission_delete`, `role_status`, `employee_create`, `employee_read`, `employee_update`, `employee_delete`, `customer_read`, `customer_create`, `blog_delete`, `order_delete`, `customer_update`, `product_create`, `product_read`, `product_update`, `order_create`, `order_read`, `order_update`, `blog_create`, `blog_read`, `blog_update`, `customer_delete`, `product_delete`) VALUES
+(1, 'Administrator', 1, 1, 1, 1, 'active', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -262,12 +273,6 @@ ALTER TABLE `Customer`
   ADD UNIQUE KEY `username` (`username`);
 
 --
--- Indexes for table `Employee`
---
-ALTER TABLE `Employee`
-  ADD PRIMARY KEY (`employee_id`);
-
---
 -- Indexes for table `messages`
 --
 ALTER TABLE `messages`
@@ -299,6 +304,12 @@ ALTER TABLE `Permission`
 --
 ALTER TABLE `Product`
   ADD PRIMARY KEY (`product_id`);
+
+--
+-- Indexes for table `RolePermission`
+--
+ALTER TABLE `RolePermission`
+  ADD PRIMARY KEY (`role_id`);
 
 --
 -- Indexes for table `Service`

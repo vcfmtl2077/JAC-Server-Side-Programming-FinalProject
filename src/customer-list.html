@@ -1,0 +1,73 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer List</title>
+    
+    <link rel="stylesheet" href="css/customer-list.css">
+    <link rel="stylesheet" href="css/table-style.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="sidebar-logo">
+            pets<span>pets</span>
+        </div>
+        <a href="admin/index.html" class="sidebar-item active">Dashboard</a>
+        <div class="sidebar-menu">
+            <div class="sidebar-title">PRODUCT & SERVICE</div>
+            <a href="admin/admin-product-list.html" class="sidebar-item">Product List</a>
+            <a href="admin/admin-service-list.html" class="sidebar-item">Service List</a>
+        </div>
+        <div class="sidebar-menu">
+            <div class="sidebar-title">CUSTOMER & ORDER</div>
+            <a href="customer-list.html" class="sidebar-item">Customer List</a>
+            <a href="admin/admin-order-list.html" class="sidebar-item">Order List</a>
+        </div>
+        <div class="sidebar-menu">
+            <div class="sidebar-title">SETTING</div>
+            <a href="admin/index.html" class="sidebar-item">Web Site Settings</a>
+        </div>
+    </div>
+
+
+    <div class="header">
+        <h1>Hi, <span id="username">User</span>. Welcome to our site.</h1>
+        <div class="actions">
+            <button id="logout-button">Logout</button>
+            <!-- <button id="loginLink">Login</button> -->
+
+            <button id="add-button">Add New Customer</button>
+        </div>
+    </div>
+
+    <div class="table-container">
+        <table id="customer-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Customer ID</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>DOB</th>
+                    <th>Email</th>
+                    <th>Telephone</th>
+                    <th>City</th>
+                    <th>Province</th>
+                    <th>Postcode</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="customer-list">
+            </tbody>
+        </table>
+    </div>
+    <script src="js/customer-list.js"></script>
+    <script src="js/signup.js"></script>
+    <!-- <script src="js/countries.js"></script> -->
+</body>
+</html>

@@ -29,7 +29,7 @@ function getEmployeeByID($id)
 
 // CRUD - R ALL
 function getAllEmployees() {
-    $sql = "SELECT * FROM employee";
+    $sql = "SELECT * FROM Employee";
     $result = $GLOBALS['dbconn']->query($sql);
     $employees = array();
     if ($result->num_rows > 0) {
@@ -42,7 +42,7 @@ function getAllEmployees() {
 
 // CRUD - U
 function updateEmployee($id, $email) {
-    $sql = "UPDATE employees SET  email='$email' WHERE id=$id";
+    $sql = "UPDATE Employee SET  email='$email' WHERE id=$id";
     if ($GLOBALS['dbconn']->query($sql) === TRUE) {
         return "Employee updated successfully";
     } else {

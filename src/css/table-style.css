@@ -1,0 +1,75 @@
+/* table-style.css */
+.table-container {
+    margin: 20px;
+    margin-left: 300px;
+    width: 80%; 
+    overflow-x: auto; 
+}
+
+table {
+    width: auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    max-width: 150px; 
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+    margin-left: 300px;
+}
+
+.actions button {
+    margin-left: 10px;
+    padding: 5px 15px;
+}
+
+.read-only-field {
+    background-color: #e0e0e0;
+}
+
+th:first-child, td:first-child {
+    background-color: #FFF; 
+    position: sticky;
+    left: 0; 
+    z-index: 100; 
+    border-right: 2px solid black; 
+}
+
+th:nth-child(2), td:nth-child(2) {
+    width: 100px;
+    min-width: 100px;
+    max-width: 100px;
+    background-color: #FFF; 
+    position: sticky;
+    left: [第一列的宽度]; 
+    z-index: 100; 
+}
+
+td:nth-child(2) input {
+    width: 100%; 
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 5px; 
+    border: 1px solid #ccc; 
+}
+
+
