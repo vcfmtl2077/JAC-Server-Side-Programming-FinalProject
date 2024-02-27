@@ -174,3 +174,23 @@ body {
 }
 
 
+.country {
+    position: fixed; 
+    top: 30px;       
+    left: 10px;  
+    width: 200px;   
+    background-color: white; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 5px; 
+    padding: 10px;  
+    z-index: 1000;  
+}
+
+.country p {
+    font-size: 18px; 
+    margin: 0 0 10px 0; 
+}
+
+#countryResult {
+    font-size: 14px;
+}

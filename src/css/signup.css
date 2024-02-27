@@ -15,7 +15,8 @@ body, html {
     width: 100%; 
     z-index: 1000; 
     background: #333; 
-    color: #fff;
+    background: #fff; 
+    /* color: #fff; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,14 +44,14 @@ body, html {
 }
 
 .nav-links li a {
-    color: white; 
+    /* color: white;  */
     text-decoration: none;
     padding: 15px 15px; 
     display: block;
 }
 
 .nav-links li a.active {
-    color: #ffffff; 
+    /* color: #ffffff;  */
     font-weight: bold; 
 
 }
@@ -197,7 +198,7 @@ body, html {
     min-height: 100%;
     width: auto; 
     height: auto;
-    z-index: -100; /* Ensure video stays in the background */
+    z-index: -100; 
     background-size: cover;
 }
 
@@ -218,7 +219,7 @@ body, html {
 .account-link:hover {
     text-decoration: underline; 
 }
-/* Handle layout for smaller screens */
+
 @media (max-width: 768px) {
     .form-container {
         width: 80%;
