@@ -777,7 +777,7 @@
                           <th>Actions</th>
                         </tr>
                       </thead>
-                      <tbody class="table-border-bottom-0">
+                      <tbody id="roleList" class="table-border-bottom-0">
                         <tr>
                           <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>1</strong></td>
                           <td>Administrator</td>
@@ -1279,16 +1279,19 @@
 
   <!-- Core JS -->
   <!-- build:js assets/vendor/js/core.js -->
-  <script src="../assets/vendor/libs/jquery/jquery.js"></script>
+
   <script src="../assets/vendor/libs/popper/popper.js"></script>
   <script src="../assets/vendor/js/bootstrap.js"></script>
   <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-
+  <script src="../assets/vendor/libs/jquery/jquery.js"></script>
+  <script src="../js/admin-permission.js"></script>
   <script src="../assets/vendor/js/menu.js"></script>
   <!-- endbuild -->
 
   <!-- Vendors JS -->
-
+  <script>
+    this.getALlRole();
+  </script>
   <!-- Main JS -->
   <script src="../assets/js/main.js"></script>
 
