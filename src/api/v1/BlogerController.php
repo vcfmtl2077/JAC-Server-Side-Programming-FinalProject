@@ -27,16 +27,16 @@ function BlogerController($pathArray, $method, $data)
 
 }
 
-function getAllBloger(){
+// function getAllBloger(){
 
-    $Bloger = getAllBloger();
-    if (isset($Bloger)) {
-        echo json_encode($Bloger, JSON_PRETTY_PRINT);
-    } else {
-        echo json_encode(array("message" => "No result found.", "status" => false, "code" => "4101"), JSON_PRETTY_PRINT);
-    }
+//     $Bloger = getAllBloger();
+//     if (isset($Bloger)) {
+//         echo json_encode($Bloger, JSON_PRETTY_PRINT);
+//     } else {
+//         echo json_encode(array("message" => "No result found.", "status" => false, "code" => "4101"), JSON_PRETTY_PRINT);
+//     }
 
-}
+// }
 function getBlogerInfo($id)
 {
     $Bloger = fetchBlogerByID($id);

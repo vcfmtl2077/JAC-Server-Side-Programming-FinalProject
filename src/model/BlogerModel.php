@@ -14,6 +14,19 @@ function fetchBlogerByID($id)
     }
 }
 
+function getAllBloger() {
+    $sql = "SELECT * FROM Blog";
+    $result = $GLOBALS['dbconn']->query($sql);
+    $bloger = array();
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            $bloger[] = $row;
+        }
+    }
+    return $bloger;
+}
+
+
 function createSingleBloger($data)
 {
     $stmt = $GLOBALS['dbconn']->prepare("INSERT INTO Blog (blog_id, title, content, author ,publish_date) 
@@ -22,3 +35,4 @@ function createSingleBloger($data)
     return mysqli_stmt_execute($stmt);
 }
 ?>
+
