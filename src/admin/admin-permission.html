@@ -965,7 +965,7 @@
             </div>
             <!--/ Role cards -->
 
-            <!-- Add Role Modal -->
+
             <!-- Add Role Modal -->
             <div class="modal fade" id="addRoleModal" tabindex="-1" aria-hidden="true">
               <div class="modal-dialog modal-lg modal-simple modal-dialog-centered modal-add-new-role">
@@ -999,7 +999,7 @@
                                       data-allow-clear="true" data-select2-id="select2Basic" tabindex="-1"
                                       aria-hidden="true" name="role_status">
                                       <option name="role_status" value="active" data-select2-id="2">Active</option>
-                                      <option name="role_status" value="active" data-select2-id="50">Inactive</option>
+                                      <option name="role_status" value="inactive" data-select2-id="50">Inactive</option>
                                     </select></div>
                                 </td>
                               </tr>
@@ -1235,8 +1235,283 @@
               </div>
             </div>
             <!--/ Add Role Modal -->
+            <!-- Update Role Modal -->
+            <div class="modal fade" id="updateRoleModal" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-simple modal-dialog-centered modal-add-new-role">
+                <div class="modal-content p-3 p-md-5">
+                  <div class="modal-body">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="text-center mb-4">
+                      <h3 class="role-title">Update Role Permission</h3>
+                      <p>Set role permissions</p>
+                    </div>
+                    <!-- Add role form -->
+                    <form id="updateRoleForm" class="row g-3" onsubmit="return false">
+                      <div class="col-12 mb-4">
+                        <label class="form-label" for="role_name">Role Name</label>
+                        <input type="text" id="role_name" name="role_name" class="form-control"
+                          placeholder="Enter a role name" tabindex="-1" />
+                      </div>
+                      <div class="col-12">
+                        <h4>Role Permissions</h4>
+                        <!-- Permission table -->
+                        <div class="table-responsive">
+                          <table class="table table-flush-spacing">
+                            <tbody>
+                              <tr>
+                                <td class="text-nowrap fw-medium">Role ID<i class="bx bx-info-circle bx-xs"
+                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                    title="Allows a full access to the system"></i></td>
+                                <td>
+                                  <input id="role_id" class="form-control" type="text" name="role_id" value="1" readonly/>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="text-nowrap fw-medium">Status<i class="bx bx-info-circle bx-xs"
+                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                    title="Allows a full access to the system"></i></td>
+                                <td>
+                                  <div class="position-relative" data-select2-id="44"><select id="select2Basic"
+                                      class="select2 form-select form-select-lg select2-hidden-accessible"
+                                      data-allow-clear="true" data-select2-id="select2Basic" tabindex="-1"
+                                      aria-hidden="true" name="role_status">
+                                      <option name="role_status" value="active" data-select2-id="2">Active</option>
+                                      <option name="role_status" value="inactive" data-select2-id="50">Inactive</option>
+                                    </select></div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="text-nowrap fw-medium">Permission Management</td>
+                                <td>
+                                  <div class="d-flex">
+                                    <div class="form-check me-3 me-lg-5">
+                                      <input class="form-check-input" type="checkbox" id="permission_create"
+                                        name="permission_create" />
+                                      <label class="form-check-label" for="permission_create">
+                                        Create
+                                      </label>
+                                    </div>
+                                    <div class="form-check me-3 me-lg-5">
+                                      <input class="form-check-input" type="checkbox" id="permission_read"
+                                        name="permission_read" />
+                                      <label class="form-check-label" for="permission_read" value="1">
+                                        Read
+                                      </label>
+                                    </div>
+                                    <div class="form-check me-3 me-lg-5">
+                                      <input class="form-check-input" type="checkbox" id="permission_update"
+                                        name="permission_update" />
+                                      <label class="form-check-label" for="permission_update">
+                                        Update
+                                      </label>
+                                    </div>
+                                    <div class="form-check me-3 me-lg-5">
+                                      <input class="form-check-input" type="checkbox" id="permission_delete"
+                                        name="permission_delete" />
+                                      <label class="form-check-label" for="permission_delete">
+                                        Delete
+                                      </label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
 
-            <!-- / Add Role Modal -->
+                              <tr>
+                                <td class="text-nowrap fw-medium">Employee Management</td>
+                                <td>
+                                  <div class="d-flex">
+                                    <div class="form-check me-3 me-lg-5">
+                                      <input class="form-check-input" type="checkbox" id="employee_create"
+                                        name="employee_create" />
+                                      <label class="form-check-label" for="employee_create">
+                                        Create
+                                      </label>
+                                    </div>
+                                    <div class="form-check me-3 me-lg-5">
+                                      <input class="form-check-input" type="checkbox" id="employee_read"
+                                        name="employee_read" />
+                                      <label class="form-check-label" for="employee_read" value="1">
+                                        Read
+                                      </label>
+                                    </div>
+                                    <div class="form-check me-3 me-lg-5">
+                                      <input class="form-check-input" type="checkbox" id="employee_update"
+                                        name="employee_update" />
+                                      <label class="form-check-label" for="employee_update">
+                                        Update
+                                      </label>
+                                    </div>
+                                    <div class="form-check me-3 me-lg-5">
+                                      <input class="form-check-input" type="checkbox" id="employee_delete"
+                                        name="employee_delete" />
+                                      <label class="form-check-label" for="employee_delete">
+                                        Delete
+                                      </label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td class="text-nowrap fw-medium">Customer Management</td>
+                                <td>
+                                  <div class="d-flex">
+                                    <div class="form-check me-3 me-lg-5">
+                                      <input class="form-check-input" type="checkbox" id="customer_create"
+                                        name="customer_create" />
+                                      <label class="form-check-label" for="customer_create">
+                                        Create
+                                      </label>
+                                    </div>
+                                    <div class="form-check me-3 me-lg-5">
+                                      <input class="form-check-input" type="checkbox" id="customer_read"
+                                        name="customer_read" />
+                                      <label class="form-check-label" for="customer_read" value="1">
+                                        Read
+                                      </label>
+                                    </div>
+                                    <div class="form-check me-3 me-lg-5">
+                                      <input class="form-check-input" type="checkbox" id="customer_update"
+                                        name="customer_update" />
+                                      <label class="form-check-label" for="customer_update">
+                                        Update
+                                      </label>
+                                    </div>
+                                    <div class="form-check me-3 me-lg-5">
+                                      <input class="form-check-input" type="checkbox" id="customer_delete"
+                                        name="customer_delete" />
+                                      <label class="form-check-label" for="customer_delete">
+                                        Delete
+                                      </label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td class="text-nowrap fw-medium">Product Management</td>
+                                <td>
+                                  <div class="d-flex">
+                                    <div class="form-check me-3 me-lg-5">
+                                      <input class="form-check-input" type="checkbox" id="product_create"
+                                        name="product_create" />
+                                      <label class="form-check-label" for="product_create">
+                                        Create
+                                      </label>
+                                    </div>
+                                    <div class="form-check me-3 me-lg-5">
+                                      <input class="form-check-input" type="checkbox" id="product_read"
+                                        name="product_read" />
+                                      <label class="form-check-label" for="product_read" value="1">
+                                        Read
+                                      </label>
+                                    </div>
+                                    <div class="form-check me-3 me-lg-5">
+                                      <input class="form-check-input" type="checkbox" id="product_update"
+                                        name="product_update" />
+                                      <label class="form-check-label" for="product_update">
+                                        Update
+                                      </label>
+                                    </div>
+                                    <div class="form-check me-3 me-lg-5">
+                                      <input class="form-check-input" type="checkbox" id="product_delete"
+                                        name="product_delete" />
+                                      <label class="form-check-label" for="product_delete">
+                                        Delete
+                                      </label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td class="text-nowrap fw-medium">Order Management</td>
+                                <td>
+                                  <div class="d-flex">
+                                    <div class="form-check me-3 me-lg-5">
+                                      <input class="form-check-input" type="checkbox" id="order_create"
+                                        name="order_create" />
+                                      <label class="form-check-label" for="order_create">
+                                        Create
+                                      </label>
+                                    </div>
+                                    <div class="form-check me-3 me-lg-5">
+                                      <input class="form-check-input" type="checkbox" id="order_read"
+                                        name="order_read" />
+                                      <label class="form-check-label" for="orderr_read" value="1">
+                                        Read
+                                      </label>
+                                    </div>
+                                    <div class="form-check me-3 me-lg-5">
+                                      <input class="form-check-input" type="checkbox" id="order_update"
+                                        name="order_update" />
+                                      <label class="form-check-label" for="order_update">
+                                        Update
+                                      </label>
+                                    </div>
+                                    <div class="form-check me-3 me-lg-5">
+                                      <input class="form-check-input" type="checkbox" id="order_delete"
+                                        name="order_delete" />
+                                      <label class="form-check-label" for="order_delete">
+                                        Delete
+                                      </label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td class="text-nowrap fw-medium">Blog Management</td>
+                                <td>
+                                  <div class="d-flex">
+                                    <div class="form-check me-3 me-lg-5">
+                                      <input class="form-check-input" type="checkbox" id="blog_create"
+                                        name="blog_create" />
+                                      <label class="form-check-label" for="blog_create">
+                                        Create
+                                      </label>
+                                    </div>
+                                    <div class="form-check me-3 me-lg-5">
+                                      <input class="form-check-input" type="checkbox" id="blog_read" name="blog_read" />
+                                      <label class="form-check-label" for="blog_read" value="1">
+                                        Read
+                                      </label>
+                                    </div>
+                                    <div class="form-check me-3 me-lg-5">
+                                      <input class="form-check-input" type="checkbox" id="blog_update"
+                                        name="blog_update" />
+                                      <label class="form-check-label" for="blog_update">
+                                        Update
+                                      </label>
+                                    </div>
+                                    <div class="form-check me-3 me-lg-5">
+                                      <input class="form-check-input" type="checkbox" id="blog_delete"
+                                        name="blog_delete" />
+                                      <label class="form-check-label" for="blog_delete">
+                                        Delete
+                                      </label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+
+                            </tbody>
+                          </table>
+                        </div>
+                        <!-- Permission table -->
+                      </div>
+                      <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-primary me-sm-3 me-1">Submit</button>
+                        <button type="reset" class="btn btn-label-secondary" data-bs-dismiss="modal"
+                          aria-label="Close">Cancel</button>
+                      </div>
+                    </form>
+                    <!--/ Add role form -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- / Update Role Modal -->
           </div>
           <!-- / Content -->
 
@@ -1315,11 +1590,36 @@
   <script>
     this.getAllRole();
     document.getElementById('addRoleForm').addEventListener('submit', createRolePermission);
+    document.getElementById('updateRoleForm').addEventListener('submit', updateRolePermission);
+    //     $('.update-role').click(function() {
+    //     var roleId = $(this).closest('tr').find('.role_id strong').text();
+    //     // Temporarily store the role_id for access by the modal
+    //     $('#updateRoleModal').data('role_id', roleId);
+    // });
+
+    var updateRoleModal = document.getElementById('updateRoleModal');
+    updateRoleModal.addEventListener('shown.bs.modal', function () {
+      // var roleId = $(this).closest('tr').find('.role_id strong').text();
+      var roleId = updateRoleModal.roleId;
+      console.log("updateRoleModal " + roleId);
+      updateRoleForm(roleId);
+    })
+
+    $(document).ready(function () {
+      // Delegate the click event from a static parent element to the dynamic delete buttons
+      $('#roleList').on('click', '.update-role', function () {
+        var roleId = $(this).closest('tr').find('.role_id strong').text();
+        updateRoleModal.roleId=roleId;
+        console.log("update-role " + roleId);
+      });
+    });
     $(document).ready(function () {
       // Delegate the click event from a static parent element to the dynamic delete buttons
       $('#roleList').on('click', '.delete-role', function () {
         var roleId = $(this).closest('tr').find('.role_id strong').text();
+        console.log("delete-role " + roleId);
         deleteRoleById(roleId);
+
       });
     });
   </script>

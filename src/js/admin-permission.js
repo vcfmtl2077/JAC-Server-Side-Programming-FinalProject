@@ -44,8 +44,8 @@ function getAllRole() {
                   <i class="bx bx-dots-vertical-rounded"></i>
                 </button>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="javascript:void(0);" data-bs-target="#addRoleModal"
-                    data-bs-toggle="modal"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                  <a class="dropdown-item update-role" href="javascript:void(0);" data-bs-target="#updateRoleModal"
+                    data-bs-toggle="modal" ><i class="bx bx-edit-alt me-1"></i> Edit</a>
                   <a class="dropdown-item delete-role" href="javascript:void(0);"><i class="bx bx-trash me-1"></i>
                     Delete</a>
                 </div>
@@ -104,6 +104,89 @@ function createRolePermission() {
             // Here you can handle the error, e.g., show an error message
         });
 }
+
+function updateRoleForm(roleId) {
+    var baseUrl = window.location.origin;  // Gets 'http://localhost:9000'
+    var apiUrl = baseUrl + "/api/v1/permission/" + roleId;
+    $.get(apiUrl, function (data) {
+        // Assuming 'data' is an array of objects with role_id, role_name, role_status
+        var updateRoleModal = document.getElementById('updateRoleModal');
+
+        // Convert data from string to JSON if necessary
+        if (typeof data === 'string') {
+            data = JSON.parse(data);
+        }
+        for (const [key, value] of Object.entries(data)) {
+            console.log(`Key: ${key}, Value: ${value}`);
+            if(value===1){
+                var checkbox = updateRoleModal.querySelector('#'+key);
+                checkbox.checked = true; 
+            }
+            if(key==='role_id'){
+                var roleID = updateRoleModal.querySelector('#'+key);
+                roleID.value = value;
+            }
+            if(key==='role_name'){
+                var role_name = updateRoleModal.querySelector('#'+key);
+                role_name.value = value;
+            }
+
+        }
+
+
+
+        // Use a for loop instead of $.each
+    });
+}
+
+function updateRolePermission() {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Access the form element
+    var form = document.getElementById('updateRoleForm');
+
+    // Create an object to hold the form data
+    var formDataObj = {};
+
+    // Populate the formDataObj with form values
+    new FormData(form).forEach((value, key) => {
+        // console.log(key);
+        // Check if the field is a checkbox
+        if (value === 'on') {
+            formDataObj[key] = 1;
+        } else {
+            // For other fields, just use the value directly
+            formDataObj[key] = value;
+        }
+    });
+
+    // Use Fetch API to send the form data as JSON
+    var baseUrl = window.location.origin;
+    var apiUrl = baseUrl + "/api/v1/permission";
+    fetch(apiUrl, {
+        method: 'PUT',
+        body: JSON.stringify(formDataObj),
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Here you can handle the response, e.g., show a success message or redirect
+            alert('Success:', data);
+            window.location.href = baseUrl + "/admin/admin-permission.html";
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            // Here you can handle the error, e.g., show an error message
+        });
+}
+
 
 function deleteRoleById(roleId) {
     // console.log("Deleting role with ID:", roleId);
