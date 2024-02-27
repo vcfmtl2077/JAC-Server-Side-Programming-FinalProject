@@ -10,6 +10,9 @@ function PermissionController($pathArray, $method, $data)
     if (count($pathArray) == 1 && $method == "GET") {
         getPermissionInfo($pathArray[0]);
     }
+    if (count($pathArray) == 0 && $method == "GET") {
+        getAllPermissionInfo();
+    }
 
   // controller logic for api POST http://localhost:9000/api/v1/permission
     if (count($pathArray) == 0 && $method == "POST") {
@@ -40,6 +43,18 @@ function getPermissionInfo($id)
 {
     $permission = fetchPermissionByID($id);
 
+    if (isset($permission)) {
+        echo json_encode($permission, JSON_PRETTY_PRINT);
+    } else {
+        echo json_encode(array("message" => "No result found.", "status" => false, "code" => "4101"), JSON_PRETTY_PRINT);
+    }
+
+}
+
+function getAllPermissionInfo()
+{
+    $permission = fetchAllPermission();
+    error_log(print_r($permission,true));
     if (isset($permission)) {
         echo json_encode($permission, JSON_PRETTY_PRINT);
     } else {
