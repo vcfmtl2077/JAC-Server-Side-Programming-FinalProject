@@ -39,6 +39,7 @@ $controllerRegistry = [
     'permission' => 'PermissionController',
     'product' => 'ProductController',
     'auth' => 'AuthenticationController',
+    'bloger' => 'BlogerController',
     'product' => 'ProductController'
 ];
 
