@@ -6,6 +6,10 @@ include("../model/BlogerModel.php");
 function BlogerController($pathArray, $method, $data)
 {
 
+        // controller logic for api GET http://localhost:9000/api/v1/bloger
+            if (count($pathArray) == 0 && $method == "GET") {
+                getAllBloger();
+            }
     // controller logic for api GET http://localhost:9000/api/v1/bloger/1
     if (count($pathArray) == 1 && $method == "GET") {
         getBlogerInfo($pathArray[0]);
@@ -23,6 +27,16 @@ function BlogerController($pathArray, $method, $data)
 
 }
 
+function getAllBloger(){
+
+    $Bloger = getAllBloger();
+    if (isset($Bloger)) {
+        echo json_encode($Bloger, JSON_PRETTY_PRINT);
+    } else {
+        echo json_encode(array("message" => "No result found.", "status" => false, "code" => "4101"), JSON_PRETTY_PRINT);
+    }
+
+}
 function getBlogerInfo($id)
 {
     $Bloger = fetchBlogerByID($id);
