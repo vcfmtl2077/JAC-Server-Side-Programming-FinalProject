@@ -6,12 +6,12 @@ include("../model/BlogerModel.php");
 function BlogerController($pathArray, $method, $data)
 {
 
-    // controller logic for api GET http://localhost:9000/api/v1/Bloger/1
+    // controller logic for api GET http://localhost:9000/api/v1/bloger/1
     if (count($pathArray) == 1 && $method == "GET") {
         getBlogerInfo($pathArray[0]);
     }
 
-  // controller logic for api POST http://localhost:9000/api/v1/Bloger
+  // controller logic for api POST http://localhost:9000/api/v1/bloger
     if (count($pathArray) == 0 && $method == "POST") {
         if (isset($data)) {
             createBloger($data);
